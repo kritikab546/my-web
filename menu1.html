@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Animation </title></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+    #menu
+    {
+        float:left;
+        background:#1B3B6F;
+        width:200px;
+        height:10px;
+        padding:10px;
+        text-align:center;
+        box-shadow:10px 10px 10px gray;
+        overflow:hidden;
+        cursor:pointer;
+        transition:1s;
+        color:white;
+        
+    }
+
+    #menu:hover
+    {
+        height:360px;
+    }
+
+    #menu ol
+    {
+        list-style:none;
+        padding:2px;
+    
+        
+    }
+
+    #menu li
+    {
+        transition:2s;
+        padding:20px;
+        margin:-10px;
+        text-align:center;
+    }
+
+    ol li:hover
+    {
+        background:#205f7c;
+        border-bottom:2px black solid;
+        
+    }
+a:link{color:white;text-decoration:none;}
+a:visited{color:white;}
+a:hover{text-decoration:underline;}
+
+
+</style>
+
+<body>
+     <a href="practicepage.html"><img src="images/back.png"> </a>
+
+
+    <div style="width:70%;margin:auto;">
+
+     <div id="menu">
+        Menu
+        <ol>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Data</a></li>
+            <li><a href="#">Contact</a></li>
+        </ol>
+     </div>
+    
+</body>
+</html>
