@@ -7,72 +7,134 @@
 </head>
 <style>
 
+body
+{
+      background-image: url(images/bg.jpg);
+      background-size: cover;
+}
 header
 {
 display:flex;
-background:black;
 height:300px;
 color:teal;
 font-size:40;
 padding:20px;
 text-align:center;
 margin:auto;
-box-shadow:10px 10px 10px gray;
-background:#F2AFB9;
 
 }
 .col1
 { 
-width:80%;
+width:20%;
+margin-top: -180px;
+margin-left: 50px;
+width:100px;
+height:280px;
 }
 .col2
 { 
 width:80%;
 cursor:pointer;
-color:white;
+color:black;
+font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+margin-top: -160px;
+margin-left: 250px;
+font-size: 20px;
+
 }
 
 .data
 {
-border:1px black solid;
+
 padding:40px;
-font-size:15px;
+font-size:18px;
 color:gray;
-border-radius:10px;
+
 width:60%;
 margin:auto;
 }
 .data:hover
 {
 cursor:pointer;
-transition:2s;
+transition:1s;
 color:black;
 }
 
-#hello
+#hello ul li
 {
-margin:auto;
-background:#D8A7B1;
-margin-top:20px;
-width:20%;
-text-align:center;
-font-size:20px;
-padding:20px;
+list-style:none;
+display: inline-block;
+padding: 20px;
+position: relative;
+left:1000px;
+border: 3px solid rgb(15, 15, 126);
+border-radius: 30px;
+transition: 0.25s;
 }
-
 #hello a
 {
- color:white;
-text-decoration:none;
+text-decoration: none;
+color: rgb(18, 18, 145);
+font-size: 25px;
 }
 
+#hello ul li:hover
+{
+      background: rgb(0, 0, 0);
+    
+}
 
+#hello a:hover
+{
+      color:white;
+}
+
+#main
+{
+      display: flex;
+}
+
+#about
+{
+      text-align:center;
+      font-size:35px;
+      margin-top: -50px;
+}
 @media only screen and (max-width: 600px)
 {
+#hello ul li
+{
+padding: 18px;
+position: relative;
+left:40px;
+border: 3px solid rgb(15, 15, 126);
+border-radius: 30px;
+transition: 0.25s;
+}
+#main
+{
+display: block;
+}
 
-body
+.col2
+{
+margin-top: 60px;
+margin-left: 100px;
+font-size: 15px;
+   
+}
+#about
+{
+   font-size:28px;
+  margin-top: 40px;  
+  margin-left: -30px;
+}
 
-{background:white;}
+.data
+{
+      width:83%;
+      text-align: justify;
+}
 
 }
 
@@ -84,27 +146,32 @@ body
 <body>
 
 <header>
+<div id="hello">
+
+    <ul>
+      <li><a href="practicepage.html"> HTML  </a></li>
+      <li><a href="#.html"> JavaScript </a></li>
+</ul>
+</div>
+</header>
+
+<div id="main">
 <div class="col1">
-<img src="images/kritika.png" width="280"   
-      height="280"
-     title="kritika"></div>
+<img src="images/kritika.png" 
+     title="kritika">
+</div>
 
 
 <div class="col2">
-<h1> Kritika Profile </h1>
+<h1><i> Hi! I'm Kritika </i> </h1>
+<p>Designing Ideas Developing Experiences</p>
+</div>
 </div>
 
+<h2 id="about">📝About me </h2>
 
-
-</header>
-
-<div id="hello">
-
-<a href="practicepage.html"> Practice Page </a>
-</div>
-
-<h2 style="text-align:center;">About me </h2>
-<div class="data"
+<hr style="width:67%;color:black;"/>
+<div class="data">
 <p>
 My name is Kritika Bhandari. I am a graduate of Delhi University,  I have developed a strong academic foundation and a passion for creativity and digital design. Currently, I am pursuing a Graphics and Web Designing course from Arena Animation, where I am gaining hands-on experience in tools like Adobe Photoshop, Illustrator, XD, and web technologies such as HTML and CSS.
 
