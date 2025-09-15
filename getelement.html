@@ -1,0 +1,141 @@
+<!doctypes html>
+<html>
+<head>
+<title>Get Element</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+<header>
+<div class="col2">  
+<img src="images/p17.jpg" id="pic" width="100%" height="100%">
+</div>
+<div class="col1">
+FLOWER
+
+</div>
+
+</header>
+
+
+
+
+
+
+<h2> About  </h2>
+<p>
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+</p>
+<p>
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+</p>
+<p>
+What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)
+</p>
+
+<script>
+    var pic = document.getElementById("pic")
+ var plist = document.getElementsByTagName("p")
+
+    pic.onclick = function(){this.src= "Images/p18.jpg"}
+    pic.onmouseover = function()
+    
+    {
+        this.style.cursor="pointer"
+        
+    }
+
+    pic.onmouseout = function()
+
+    {
+        this.src="images/p17.jpg"
+    }
+
+    plist[0].onmouseover = function(){this.className="zoom"}
+    plist[0].onmouseout = function()
+    {this.className=""}
+
+    plist[1].onmouseover = function(){this.className="zoom"}
+    plist[1].onmouseout = function(){this.className=""}
+
+    plist[2].onmouseover = function(){this.className="zoom"}
+    plist[2].onmouseout = function(){this.className=""}
+
+    plist[3].onmouseover = function(){this.className="zoom"}
+    plist[3].onmouseout = function(){this.className=""}
+
+    plist[4].onmouseover = function(){this.className="zoom"}
+    plist[4].onmouseout = function(){this.className=""}
+
+
+</script>
+
+</body>
+
+<style>
+    .zoom{
+        cursor: pointer;
+        background:#f199cd;
+        transition: 1.50s;
+        transform: scale(1.02);
+        
+    }
+header
+{
+display:flex;
+background:#DFE6DA;
+height:200px;
+margin:0;
+font-size:40px;
+text-align:center;
+padding:20px;
+margin:auto;
+box-shadow:10px 10px 10px gray;
+}
+.col1
+{
+font-size:50px;
+width:80%;
+height:10px;
+box-sizing:border-box;
+padding-top:50px;
+padding-right:300px;
+}
+#pic
+{
+width:100%;
+height:100%;
+
+
+
+}
+
+
+
+.col2
+{
+    background: red;
+    height:220px;
+    width:600px;
+    margin-top:-10px;
+
+}
+
+
+
+
+</style>
+
+</html>
