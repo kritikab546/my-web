@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+.pic
+{
+    width: 20%;
+    box-shadow: 10px 10px 10px grey;
+    margin: 40px;
+    transition:0.5s;
+    margin-left:30px;
+    }
+
+ body
+ {
+    background:pink;
+ }
+
+
+   
+   
+</style>
+
+
+<body>
+
+    <script>
+        var a = 1
+        while(a<=12)
+    {
+        document.write("<img onmouseout='goback(this)' onclick='show(this)' class='pic' src = 'images/f"+a+".jpg'>")
+        a++
+    }
+    function show(pic)
+    {
+        pic.style.transform="scale(1.2)"
+
+    }
+
+    function goback(pic)
+    {
+        pic.style.transform="scale(1)"
+
+    }
+    document.title="no error"
+
+
+        
+       
+    </script>
+</body>
+</html>
