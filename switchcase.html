@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .pic
+    {
+     width:80%;
+     display:block;
+     margin:auto;
+     box-shadow: 10px 10px 10px gray;
+
+    }
+
+    body{
+        text-align:center;
+    }
+</style>
+<body>
+    <h1 id ="data" class="b"></h1>
+    <img id="banner"  src= "images/f1.jpg" class="pic">
+    <script>
+        var m = document.getElementById("data")
+        var p = document.getElementById("banner")
+
+        var d = new Date()
+        var today = d.getDay()
+
+        switch(today)
+        {
+            case 0:
+                m.innerHTML="Today is Sunday"
+                p.src="images/f2.jpg"
+            break;
+
+            case 1:
+                m.innerHTML="Today is Monday"
+                p.src="images/f3.jpg"
+            break;
+
+
+            case 2:
+                m.innerHTML="Today is Tuesday"
+                p.src="images/f4.jpg"
+            break;
+
+
+            case 3:
+                m.innerHTML="Today is Wednesday"
+                p.src="images/f5.jpg"
+            break;
+
+            case 4:
+                m.innerHTML="Today is Thursday"
+                p.src="images/f6.jpg"
+            break;
+
+
+            case 5:
+                m.innerHTML="Today is Friday"
+                p.src="images/f7.jpg"
+            break;
+
+            case 6:
+                m.innerHTML="Today is Saturday"
+                p.src="images/f8.jpg"
+            break;
+
+            default:
+                m.innerHTML="welcome"
+            
+
+            
+        }
+
+    </script>
+</body>
+</html>

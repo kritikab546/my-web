@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Date in javascript</h1>
+    <div id ="clock"></div>
+    <script>
+        // Date is a class (Datetype in programing)
+        // creating instance of Date Class
+
+        var d
+        var b = document.getElementById("clock")
+        b.style.background="black";
+        b.style.color="white"
+        b.innerHTML="Clock"
+        b.style.fontSize="60px"
+        b.style.padding="40px"
+        b.style.width="450px"
+        b.style.textAlign="center"
+        b.style.fontFamily="Arial Black"
+        b.style.boxShadow="10px 10px 10px gray"
+
+        function show()
+        {
+            d = new Date()
+            b.innerHTML = d.toLocaleTimeString()
+            if(d.getSeconds()>10)
+              {
+            document.bgColor="green"
+
+              }
+
+            if(d.getSeconds()<10)
+             {
+            document.bgColor="yellow"
+             }
+        }
+
+        setInterval("show()",1000)
+
+    </script>
+    
+</body>
+</html>
