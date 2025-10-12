@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .pic
+    {
+        width:20%;
+        position:absolute;
+        top:0px;
+        left:0px;
+    }
+</style>
+<body>
+    <img id="bird" class="pic" src="images/bird.gif">
+
+<script>
+    
+    var bird = document.getElementById("bird")
+    var t = 0
+    var l = 0
+
+    function f1(e)
+    {
+        var k = e.key
+
+        switch(k)
+        {
+
+            case "ArrowLeft":
+            document.title ="left arrow"
+            l=l-20
+            bird.style.left = l+"px"
+            bird.style.transform="rotateY(180deg)"
+            break;
+            
+            case "ArrowRight":
+            document.title ="right arrow"    
+            l=l+20
+            bird.style.left=l+"px"
+            bird.style.transform="rotateY(0deg)"
+            break;     
+
+        }
+    }
+    document.addEventListener("keydown",f1)
+</script>    
+    
+</body>
+</html>

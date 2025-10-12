@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #banner
+    {
+        width:70%;
+        height:400px;
+        margin:auto;
+        box-shadow:10px 10px 10px gray;
+    }
+    #pic
+    {
+        width:100%;
+        height:100%;
+    }
+</style>
+<div id="banner">
+    <img id="pic" src="images/f1.jpg">
+    <br/>
+    <button onclick="next()">⬅️</button>
+    <button onclick="prev()" style="margin-left:93%">➡️</button>
+    </div>
+
+    <script>
+        var p = document.getElementById("pic")
+        var c = 1
+        
+        function changepic()
+        {
+            if(c<10)
+              {
+                c++
+              }
+            else
+              {
+                c=1
+              }  
+        p.src="images/f"+c+".jpg"
+        p.classList.add("animate__animated","animate__bounceIn")
+
+        setTimeout('p.classList.remove("animate__bounceIn")',500)
+        document.title = c
+        }
+
+        function next()
+        {
+            if(c<10)
+              {
+                c++
+              }
+              else
+              {
+                c=1
+              }
+        changepic()
+        
+        setTimeout('p.classList.remove("animate__bounceIn")',500)
+
+        
+        }
+
+        setInterval("changepic()",2000)
+    </script>
+<body>
+    
+</body>
+</html>
