@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<style>
+.details-box
+     {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav li 
+{
+  position: relative;
+}
+
+ #mid
+    {
+      background: rgb(25, 36, 50);
+      height:570px;
+      position: relative;
+      top:100px;
+      text-align: center;
+    }
+   
+    #mid h2
+    {
+      text-align: center;
+      color: #6c63ff;
+      margin-bottom: 40px;
+      position: relative;
+      top:15px;
+      
+    }
+
+   .card
+   {
+    padding:10px;
+    border:2px solid blue;
+    margin:20px;
+    transition:0.5s;
+   } 
+    .card h3
+    {
+      font-size:25px;
+      background: #99daeb;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+  .card:hover
+  {
+    box-shadow: 10px 10px 10px gray;
+  }  
+  
+.card p
+{
+position: relative;
+top:10px;
+font-size: 16px;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav li:hover .details-box {
+  display: block;
+  cursor: pointer;
+}
+
+
+nav ul li
+{
+     display: inline-block;
+     padding:15px;
+     font-size: 20px;     
+}
+
+nav
+{
+    width:100%;
+    background: black;
+ 
+}
+nav ul li a
+    {
+        text-decoration: none;
+        color:rgb(125, 182, 236); 
+      
+    }
+
+
+    header 
+    {
+      background: linear-gradient(135deg, #6c63ff, #5edfff);
+      color: #fff;
+      text-align: center;
+      height:300px;
+      padding: 60px 20px;
+    }
+
+header h2
+{
+    font-size:40px;
+}
+
+#start h3
+{
+text-align: center;
+position: relative;
+top:40px;
+}
+
+#start p
+{
+    width:60%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top:50px;
+    text-align: justify;
+}
+
+.photo
+{
+    position: relative;
+    top:70px;
+    margin: auto;
+ 
+}
+#last
+{
+  height:350px;
+position: relative;
+top:130px;
+text-align: center;
+
+}
+
+#last h1
+{
+font-size: 30px;
+font-size: 40px;
+background: rgb(50, 75, 138);
+color: white;
+border-radius: 20px;
+}
+
+#last p
+{
+  width:100%;
+  margin: auto;
+  position: relative;
+  top:30px;
+  text-align: justify;
+}
+.AI
+{
+  margin:auto;
+  border:3px solid rgb(30, 120, 134);
+background: rgb(50, 58, 93);
+width:100%;
+color: white;
+height:160px;
+position: relative;
+top:80px;
+text-align: center;
+padding:10px;
+transition: 0.5s;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 10px 10px 10px gray;
+}
+
+.AI:hover
+{
+  transform: scale(1);
+  box-shadow: 5px 5px 5px gray;
+}
+
+.AI h4
+{
+  text-align: center;
+}
+#end
+{
+  width:80%;
+  margin: auto;
+}
+
+#h2
+{
+    position: relative;
+    top:50px;
+    text-align: center;
+}
+
+#content
+{
+  height:400px;
+  position: relative;
+  top:170px;
+  text-align: center;
+
+}
+
+#content p
+{
+
+  text-align: justify;
+  padding: 20px;
+  text-align: center;
+}
+
+#pic
+{
+  border-radius: 20px;
+  border: 8px solid rgb(47, 137, 162);
+}
+
+footer
+{
+  position: relative;
+  top:100px;
+  height:350px;
+  background: #1a1838;
+}
+
+footer h2
+{
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top:20px;
+}
+
+#foot ul li
+{
+  list-style: none;
+   padding:12px;
+   display: inline-block;
+   font-size: 18px;
+}
+
+#foot a
+{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top:60px;
+}
+
+#foot
+{
+  text-align: center;
+  
+}
+
+#icon
+{
+  position: relative;
+  top:60px;
+  margin: auto;
+  width:12%;
+}
+
+footer p
+{
+  color:white;
+  position: relative;
+  top:100px;
+  text-align: center;
+  font-size: 25px;
+}
+
+footer ol li
+{
+  color:white;
+  list-style: none;
+  position: relative;
+  top:100px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px)
+{
+ #start p
+{
+width:90%;
+}
+  #photo
+  {
+    margin:20px;
+  }
+.AI
+  {
+    position: relative;
+    top:660px; 
+  }
+
+  #end
+  {
+   margin:10px;
+   width:90%;
+   margin: auto;
+  }
+#mid
+  {
+    height:2300px;
+    position: relative;
+    top:700px;
+    
+  }
+#content
+{
+    position: relative;
+    top:740px;
+}
+
+footer 
+ {
+  height:400px;
+  position: relative;
+  top:1000px;
+ }
+
+ #icon
+ {
+  width:36%;
+ }
+}
+</style>
+<body>
+  
+<nav>
+  <ul class="nav flex-nowrap " id="menu">
+    <li> 
+    <a href="AI.html"> Home</a> </li>
+
+    <li>
+   <a href="history.html"> History</a>
+    <div class="details-box">
+    A journey from early algorithms to today’s intelligent Generative AI.
+    </div>
+    </li>
+      
+    <li>
+    <a href="App.html"> Applications</a>
+    <div class="details-box">
+      To show real-life uses of AI in daily life and industries
+     
+    </div>
+    </li>
+   </nav>  
+
+   <header>
+    <h1>Exploring Generative AI</h1>
+    <p>Discover how Artificial Intelligence is shaping creativity and innovation.</p>
+    <h2>AI Basics</h2>
+  </header>
+    
+
+<div id="start">
+
+<h3>What is Artificial Intelligence?</h3>
+<p>Artificial Intelligence (AI) is a technology that allows machines to perform tasks that normally require human intelligence. This includes things like learning from experience, understanding language, recognizing images, solving problems, and making decisions.Artificial Intelligence is the ability of machines to think, learn, and act like humans. It helps computers understand information, find patterns, and make smart decisions. </p>
+
+
+<div id="last">
+
+  <div class="row">
+
+    <div class="col-12 col-md-4">
+        <img src="images/AI12.png" id="photo">
+    </div>
+
+    <div class="col-12 col-md-4">
+        <img src="images/AI13.png" id="photo">
+    </div>
+
+      <div class="col-12 col-md-4">
+        <img src="images/AI14.png" id="photo">
+      </div>
+
+  </div>
+
+</div>
+</div>
+
+<h2 id="h2"><b>Types of AI </b> </h2>
+
+<div id="end">
+
+<div class="row justify-content-center">
+
+  <div class="col-6 col-lg-3 mb-3">
+       <div class="AI">
+         <h4><b>Artificial Narrow Intelligence</b></h4>
+         <p>AI that can do only one specific task very well.</p>
+         </div>
+    </div>
+
+    <div class="col-6 col-lg-3 mb-3">
+        <div class="AI">
+         <h4><b>Artificial General Intelligence</b></h4>
+         <p>AI that can think, learn, understand, and make decisions like a human.</p>
+         </div>
+    </div>
+
+    <div class="col-6 col-lg-3 mb-3">
+           <div class="AI">
+           <h4><b>Artificial Superintelligence</b></h4>
+           <p>AI that is smarter than humans in every field — creativity, logic.</p>
+           </div>
+    </div>
+</div>
+</div>
+
+<div id="mid">
+<h2><b>Key Components of AI</b></h2>
+
+
+<div class="row g-3">
+
+<div class="col-lg-3 col-sm-6">   
+     <div class="card">
+     <h3><b>Machine Learning</b></h3> 
+     <p>A method where AI learns from data and improves over time without being directly programmed.</p>
+          <img src="images/AI15.png">
+      </div>
+</div>
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>Neural Networks</b></h3>
+       <P>A computer system inspired by the human brain, made of layers that process information and find patterns.</P>
+  <img src="images/AI16.png">
+
+
+      </div>
+</div>
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>Deep Learning</b></h3> 
+      <P>An advanced form of neural networks with many layers, allowing AI to understand complex tasks.</P>
+      <img src="images/AI7.png">
+      </div>
+</div>      
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>Natural Processing</b></h3> 
+      <p>A technology that helps AI understand and respond to human language. AI in daily life and industries.</p>
+      <img src="images/AI8.png">
+      </div>
+</div>      
+</div>
+</div>  
+
+<div id="content">
+
+  <div class="row">
+   
+    <div class="col">
+  <h2><b>Why AI Is Important</b></h2>
+
+  <p>AI can handle tasks faster than humans — like sorting data, analyzing information, or generating results instantly.
+Example: Quick search suggestions, instant translations.</p>
+   
+    <p>AI takes over boring, repeated work so humans can focus on bigger tasks.
+Example: Auto-reply emails, automated customer service.</p>
+
+
+ </div>
+
+ <div class="col">
+<img src="images/AI17.png" id="pic">
+</div>
+
+
+</div>
+</div>
+
+
+<footer>
+
+
+<h2><b>Your guide to Artificial Intelligence and Generative AI</b></h2>
+
+<div id="foot">
+  <ul>
+    <li><a href=""> AI Basics </a> </li>
+    <li><a href=""> History</a></li>
+    <li><a href=""> Evolution </a> </li>
+    <li> <a href=""> Applications</a></li>
+  </ul>   
+</div>  
+
+
+<div id="icon">
+  <img src="images/AI9.png">
+  <img src="images/AI10.png">
+  <img src="images/AI11.png">
+
+</div>
+
+<p>Contact</p>
+<ol>
+   <li>Gmail-LearnAI.gmail.com</li>
+   <li>Phone-123456789</li>
+</ol>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>    
+</body>
+</html>

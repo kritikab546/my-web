@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<style>
+.details-box
+     {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav li 
+{
+  position: relative;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav li:hover .details-box {
+  display: block;
+  cursor: pointer;
+}
+
+
+nav ul li
+{
+     display: inline-block;
+     padding:15px;
+     font-size: 20px;     
+}
+
+nav
+{
+    width:100%;
+    background: black;
+ 
+}
+nav ul li a
+    {
+        text-decoration: none;
+        color:rgb(125, 182, 236); 
+      
+    }
+
+
+    header 
+    {
+      background: linear-gradient(135deg, #6c63ff, #5edfff);
+      color: #fff;
+      text-align: center;
+      height:300px;
+      padding: 60px 20px;
+    }
+
+header h2
+{
+    font-size:40px;
+}
+
+#top
+{ 
+
+width:50%; 
+text-align:center; 
+margin:auto;  
+color:rgb(0, 0, 0); 
+position: relative;
+top:50px;
+} 
+#container 
+{ 
+width:70%; 
+margin:auto;
+border-radius:10px; 
+text-align:center;
+font-size:20px; 
+position: relative;
+top:80px;
+color:white;
+background: rgb(27, 30, 50);
+
+} 
+
+#container table 
+{ 
+width:100%; 
+cursor:pointer; 
+} 
+#container table th 
+{ 
+text-align:center; 
+} 
+
+tr:hover 
+{
+background:#ffffff; 
+color: black;
+} 
+
+#start h3
+{
+text-align: center;
+position: relative;
+top:40px;
+}
+
+#start p
+{
+    width:60%;
+    text-align: center;
+    margin: auto;
+    position: relative;
+    top:50px;
+    text-align: justify;
+}
+
+.photo
+{
+    position: relative;
+    top:70px;
+    margin: auto;
+ 
+}
+#last
+{
+  height:350px;
+position: relative;
+top:130px;
+text-align: center;
+
+}
+
+#last h1
+{
+font-size: 30px;
+font-size: 40px;
+background: rgb(50, 75, 138);
+color: white;
+border-radius: 20px;
+}
+
+#last p
+{
+  width:100%;
+  margin: auto;
+  position: relative;
+  top:30px;
+  text-align: justify;
+}
+.AI
+{
+  margin:auto;
+  border:3px solid rgb(30, 120, 134);
+background: rgb(50, 58, 93);
+width:100%;
+color: white;
+height:250px;
+position: relative;
+top:80px;
+text-align: center;
+padding:10px;
+transition: 0.5s;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 10px 10px 10px gray;
+}
+
+.AI p
+{
+  text-align: justify;
+  padding:5px;
+}
+.AI:hover
+{
+  transform: scale(1);
+  box-shadow: 5px 5px 5px gray;
+}
+
+.AI h4
+{
+  text-align: center;
+}
+#end
+{
+  width:100%;
+  margin: auto;
+}
+
+#h2
+{
+    position: relative;
+    top:50px;
+    text-align: center;
+}
+
+#content
+{
+  height:400px;
+  position: relative;
+  top:170px;
+  text-align: center;
+
+}
+
+#content p
+{
+
+  text-align: justify;
+  padding: 20px;
+  text-align: center;
+}
+
+#pic
+{
+  border-radius: 20px;
+  border: 8px solid rgb(47, 137, 162);
+}
+
+footer
+{
+  position: relative;
+  top:100px;
+  height:350px;
+  background: #1a1838;
+}
+
+footer h2
+{
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top:20px;
+}
+
+#foot ul li
+{
+  list-style: none;
+   padding:12px;
+   display: inline-block;
+   font-size: 18px;
+}
+
+#foot a
+{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top:60px;
+}
+
+#foot
+{
+  text-align: center;
+  
+}
+
+#icon
+{
+  position: relative;
+  top:60px;
+  margin: auto;
+  width:12%;
+}
+
+footer p
+{
+  color:white;
+  position: relative;
+  top:100px;
+  text-align: center;
+  font-size: 25px;
+}
+
+footer ol li
+{
+  color:white;
+  list-style: none;
+  position: relative;
+  top:100px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px)
+{
+
+  #top
+  {
+    width:100%;
+    position: relative;
+  
+  }
+  #container 
+{ 
+width:95%; 
+margin:auto;
+border-radius:10px; 
+text-align:center;
+font-size:20px; 
+position: relative;
+top:80px;
+color:white;
+background: rgb(27, 30, 50);
+
+} 
+
+#container table 
+{ 
+width:100%; 
+cursor:pointer; 
+} 
+#container table th 
+{ 
+text-align:center; 
+} 
+
+
+tr:hover 
+{
+background:#ffffff; 
+color: black;
+} 
+ #start p
+{
+width:90%;
+}
+  #photo
+  {
+    margin:20px;
+  }
+.AI
+  {
+    position: relative;
+    top:660px; 
+    height:350px;
+    width:100%;
+  }
+
+  #end
+  {
+   margin:10px;
+   width:90%;
+   margin: auto;
+  }
+
+#content
+{
+    position: relative;
+    top:740px;
+}
+
+footer 
+ {
+  height:400px;
+  position: relative;
+  top:1000px;
+ }
+
+ #icon
+ {
+  width:36%;
+ }
+}
+</style>
+<body>
+  
+<nav>
+  <ul class="nav flex-nowrap " id="menu">
+    <li> 
+    <a href="AI.html"> Home</a> </li>
+
+    <li>
+   <a href="Basics.html"> Basics</a>
+    <div class="details-box">
+    A journey from early algorithms to today’s intelligent Generative AI.
+    </div>
+    </li>
+      
+    <li>
+    <a href="App.html"> Applications</a>
+    <div class="details-box">
+      To show real-life uses of AI in daily life and industries
+     
+    </div>
+    </li>
+   </nav>  
+
+   <header>
+    <h1>Exploring Generative AI</h1>
+    <p>Discover how Artificial Intelligence is shaping creativity and innovation.</p>
+    <h2>AI History</h2>
+  </header>
+    
+
+<div id="start">
+
+<h3>The Beginning of AI</h3>
+<p>The idea of intelligent machines began in early research on logic, mathematics, and computing. Scientists started imagining whether machines could reason like humans. In the 1950s, this dream turned into reality when researchers officially introduced the concept of Artificial Intelligence and began creating programs that could solve problems, make decisions, and learn like humans. </p>
+
+
+
+
+<div id="top"> 
+    <h1>🗓️ AI Timeline – Key Events</h1> 
+   </div>
+   
+   <div id="container"> 
+        <table cellpadding="15" cellspacing="2"> 
+        <tr bgColor="#EAF8F9"> 
+       
+        
+         </th> 
+       </tr> 
+   
+       <tr> 
+        <th>Year</th> <th>Event</th><th>Description</th>
+      </tr> 
+  
+      <tr> 
+        <td> 1950</td><td>Turing Test </td><td>Can machines think like humans?</td> 
+     </tr>  
+   
+     <tr> 
+       <td>1956</td><td>Birth of AI</td><td>The term “AI” is introduced.</td>
+     </tr> 
+   
+     <tr> 
+       <td>1960s</td><td>Early Programs</td><td>AI solves simple logic tasks.</td>
+     </tr>
+    
+     <tr> 
+       <td>1980s</td><td>Machine Learning</td><td>Computers start learning from data.</td>
+     </tr>
+    
+     <tr> 
+      <td>2000s</td><td>Big Data Era </td><td> AI improves with massive datasets.</td>
+    </tr>
+
+    <tr> 
+      <td>2012</td><td>Deep Learning </td><td>Big progress in image & speech recognition.</td>
+    </tr>
+
+    <tr> 
+      <td>2020s</td><td>Gen AI Boom </td><td>AI creates text, images, and videos.</td>
+    </tr>
+   </table>
+</div>
+
+<div id="last">
+
+  <div class="row">
+
+    <div class="col-12 col-md-4">
+        <img src="images/AI12.png" id="photo">
+    </div>
+
+    <div class="col-12 col-md-4">
+        <img src="images/AI13.png" id="photo">
+    </div>
+
+      <div class="col-12 col-md-4">
+        <img src="images/AI14.png" id="photo">
+      </div>
+
+  </div>
+
+</div>
+</div>
+
+<h2 id="h2"><b>Old AI vs Modern AI </b> </h2>
+<div id="end">
+
+<div class="row justify-content-center">
+
+  <div class="col-6 col-lg-3 mb-3">
+       <div class="AI">
+         <h4><b>OLD AI</b></h4>
+        <p>Rule-Based: Followed fixed IF–THEN rules.No Learning: Could not improve on its own.Limited Power: Weak computing, small datasets.Narrow Tasks: Could solve only simple logic problems.Slow & Rigid: Couldn’t adapt to new data.</p>
+         </div>
+    </div>
+
+    <div class="col-6 col-lg-3 mb-3">
+        <div class="AI">
+         <h4><b>New AI</b></h4>
+         <p>earns From Data: Improves automatically with experience.Understands Images, Speech, and Language: Thanks to neural networks.Generative Abilities: Can create text, images, music, and videos.Highly Accurate.</p>
+         </div>
+    </div>
+
+    
+</div>
+</div>
+
+
+<div id="content">
+
+  <div class="row">
+   
+    <div class="col">
+  <h2><b>How AI Has Evolved</b></h2>
+
+  <p>AI can handle tasks faster than humans — like sorting data, analyzing information, or generating results instantly.
+Example: Quick search suggestions, instant translations.</p>
+   
+    <p>AI takes over boring, repeated work so humans can focus on bigger tasks.
+Example: Auto-reply emails, automated customer service.</p>
+
+
+ </div>
+
+ <div class="col">
+<img src="images/AI18.png" id="pic">
+</div>
+
+
+</div>
+</div>
+
+
+<footer>
+
+
+<h2><b>Your guide to Artificial Intelligence and Generative AI</b></h2>
+
+<div id="foot">
+  <ul>
+    <li><a href=""> AI Basics </a> </li>
+    <li><a href=""> History</a></li>
+    <li><a href=""> Evolution </a> </li>
+    <li> <a href=""> Applications</a></li>
+  </ul>   
+</div>  
+
+
+<div id="icon">
+  <img src="images/AI9.png">
+  <img src="images/AI10.png">
+  <img src="images/AI11.png">
+
+</div>
+
+<p>Contact</p>
+<ol>
+   <li>Gmail-LearnAI.gmail.com</li>
+   <li>Phone-123456789</li>
+</ol>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>    
+</body>
+</html>

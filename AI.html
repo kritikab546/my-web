@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exploring Generative AI</title>
+
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <style>
+    * 
+    {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body 
+    {
+      background: #f9f9fb;
+      color: #333;
+    }
+
+    header 
+    {
+      background: linear-gradient(135deg, #6c63ff, #5edfff);
+      color: #fff;
+      text-align: center;
+      height:300px;
+      padding: 60px 20px;
+    }
+
+    header h1 
+    {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header h2
+    {
+      margin-top: 60px;
+      font-size:17px;
+    }
+    header p 
+    {
+      font-size: 1.1em;
+      opacity: 0.9;
+    }
+
+ .details-box
+     {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 250px;
+  background: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  animation: slideDown 0.3s ease;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.nav li 
+{
+  position: relative;
+}
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav li:hover .details-box {
+  display: block;
+  cursor: pointer;
+}
+
+
+nav ul li
+{
+     display: inline-block;
+     padding:15px;
+     font-size: 20px;     
+}
+
+nav
+{
+    width:100%;
+    background: black;
+ 
+}
+nav ul li a
+    {
+        text-decoration: none;
+        color:rgb(125, 182, 236); 
+      
+    }
+
+    #intro
+     {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.8;
+      border:4px solid rgb(92, 175, 238);
+      border-radius: 10px;
+      position: relative;
+      top:20px;
+      background: rgb(243, 250, 253);
+      padding:30px;
+
+    }
+
+    #intro h2
+    {
+      text-align: center;
+      color: #6c63ff;
+      margin-bottom: 20px;
+    }
+
+    #mid
+    {
+      background: rgb(25, 36, 50);
+      height:570px;
+      position: relative;
+      top:40px;
+      text-align: center;
+    }
+   
+    #mid h2
+    {
+      text-align: center;
+      color: #6c63ff;
+      margin-bottom: 40px;
+      position: relative;
+      top:15px;
+      
+    }
+
+   .card
+   {
+    padding:10px;
+    border:2px solid blue;
+    margin:20px;
+    transition:0.5s;
+   } 
+    .card h3
+    {
+      font-size:25px;
+      background: #99daeb;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+  .card:hover
+  {
+    box-shadow: 10px 10px 10px gray;
+  }  
+  
+.card p
+{
+position: relative;
+top:10px;
+font-size: 16px;
+}
+
+#content
+{
+  height:400px;
+  position: relative;
+  top:100px;
+  text-align: center;
+
+}
+
+#content p
+{
+
+  text-align: justify;
+  padding: 20px;
+  text-align: center;
+}
+
+#content h3
+{
+  border: 2px solid rgb(19, 19, 38);
+  width:25%;
+  margin: auto;
+  padding:10px;
+ border-radius: 20px;
+ font-size: 18px;
+ cursor: pointer;
+ transition: 0.5s;
+   background: rgb(23, 23, 57);
+   color: white;
+}
+
+#content h3:hover
+{
+  background: rgb(213, 222, 245);
+  color: rgb(18, 0, 0);
+}
+#pic
+{
+  border-radius: 20px;
+  border: 8px solid rgb(47, 137, 162);
+}
+
+#box
+{
+  height:400px;
+  background: #1f2a39;
+  position: relative;
+  top:80px;
+  color:#1f2a39;
+  text-align: center;
+}
+
+#box h2
+{
+  color: white;
+  position: relative;
+  top:20px;
+}
+.time
+{
+  margin:auto;
+  border:5px solid rgb(30, 120, 134);
+background: white;
+border-radius: 20px;
+width:100%;
+height:160px;
+position: relative;
+top:80px;
+padding:10px;
+transition: 0.5s;
+}
+
+.time:hover
+{
+  transform: scale(1.1);
+  box-shadow: 5px 5px 5px gray;
+}
+#box h3
+{
+  border: 2px solid rgb(19, 19, 38);
+  width:25%;
+  padding:10px;
+ border-radius: 20px;
+ font-size: 18px;
+ text-align: center;
+ cursor: pointer;
+ transition: 0.5s;
+   background: white;
+   color: rgb(23, 23, 57);
+   position: relative;
+   top:120px;
+   margin: auto;
+}
+
+#box h3:hover
+{
+  background: rgb(54, 115, 146);
+  color: rgb(255, 255, 255);
+}
+#last
+{
+  height:350px;
+position: relative;
+top:130px;
+text-align: center;
+
+}
+
+#last h1
+{
+font-size: 30px;
+font-size: 40px;
+background: rgb(50, 75, 138);
+color: white;
+border-radius: 20px;
+}
+
+#last p
+{
+  width:100%;
+  margin: auto;
+  position: relative;
+  top:30px;
+  text-align: justify;
+}
+
+.AI
+{
+  margin:auto;
+  border:3px solid rgb(30, 120, 134);
+background: rgb(50, 58, 93);
+width:100%;
+color: white;
+height:160px;
+position: relative;
+top:80px;
+text-align: center;
+padding:10px;
+transition: 0.5s;
+border-radius: 10px;
+cursor: pointer;
+box-shadow: 10px 10px 10px gray;
+}
+
+.AI:hover
+{
+  transform: scale(1);
+  box-shadow: 5px 5px 5px gray;
+}
+
+.AI h4
+{
+  text-align: center;
+}
+#end
+{
+  width:80%;
+  margin: auto;
+}
+
+footer
+{
+  position: relative;
+  top:100px;
+  height:350px;
+  background: #1a1838;
+}
+
+footer h2
+{
+  color:white;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top:20px;
+}
+
+#foot ul li
+{
+  list-style: none;
+   padding:12px;
+   display: inline-block;
+   font-size: 18px;
+}
+
+#foot a
+{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top:60px;
+}
+
+#foot
+{
+  text-align: center;
+  
+}
+
+#icon
+{
+  position: relative;
+  top:60px;
+  margin: auto;
+  width:12%;
+}
+
+footer p
+{
+  color:white;
+  position: relative;
+  top:100px;
+  text-align: center;
+  font-size: 25px;
+}
+
+footer ol li
+{
+  color:white;
+  list-style: none;
+  position: relative;
+  top:100px;
+  text-align: center;
+}
+@media only screen and (max-width: 600px)
+{
+  #mid
+  {
+    height:2570px;
+  }
+
+  #pic
+  {
+    position: relative;
+    top:20px;
+  
+  }
+  #box
+  {
+    position: relative;
+    top:500px;
+    height:800px;
+  }
+
+  .time
+  {
+    width:80%;
+    height:100px;
+  }
+
+  #last
+  {
+    position: relative;
+    top:550px;
+  }
+
+  #last p 
+  {
+    width:90%;
+  }
+
+  #photo
+  {
+    position: relative;
+    top:50px;
+  }
+
+  #im
+  {
+    position: relative;
+    top:-20px;
+  }
+
+  .AI
+  {
+    position: relative;
+    top:1050px; 
+  }
+
+  #end
+  {
+   margin:10px;
+   width:90%;
+   margin: auto;
+  }
+
+ footer 
+ {
+  height:400px;
+  position: relative;
+  top:1100px;
+ }
+
+ #icon
+ {
+  width:36%;
+ }
+
+
+}
+
+
+  </style>
+</head>
+<body>
+
+  <nav>
+  <ul class="nav flex-nowrap " id="menu">
+    <li> 
+    <a href="Basics.html"> AI Basics </a> 
+    <div class="details-box">
+    Learn the simple fundamentals of how Artificial Intelligence works
+    </div>             
+    </li>
+
+    <li>
+   <a href="history.html"> History</a>
+    <div class="details-box">
+    A journey from early algorithms to today’s intelligent Generative AI.
+    </div>
+    </li>
+      
+    <li>
+    <a href="App.html"> Applications</a>
+    <div class="details-box">
+      To show real-life uses of AI in daily life and industries
+     
+    </div>
+    </li>
+   </nav>  
+
+  <header>
+    <h1>Exploring Generative AI</h1>
+    <p>Discover how Artificial Intelligence is shaping creativity and innovation.</p>
+    <h2>Creativity Powered by Artificial Intelligence</h2>
+  </header>
+
+ 
+  <div id="intro">
+    <h2>Understanding AI </h2>
+    <p>
+      Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think and learn. AI systems can analyze data, recognize patterns, and make decisions with minimal human intervention.
+    </p>
+  </br>
+    <p>
+      Generative AI (Gen AI) is a subfield of AI that focuses on creating new content such as images, text, music, and videos. Models like ChatGPT, DALL·E, and Midjourney use deep learning to generate creative outputs.
+    </p>
+  </div>
+
+<div id="mid">
+<h2><b>Get to Know AI Step by Step</b></h2>
+
+
+<div class="row g-3">
+
+<div class="col-lg-3 col-sm-6">   
+     <div class="card">
+     <h3><b>AI Basics</b></h3> 
+     <p>Purpose:To introduce beginners to the simplest concepts of AI.</p>
+          <img src="images/AI1.png">
+      </div>
+</div>
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>History of AI</b></h3>
+       <P>Purpose:
+To explain how AI started and how it got to where it is today.</P>
+  <img src="images/AI2.png">
+
+
+      </div>
+</div>
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>Evolution of AI</b></h3> 
+      <P>how AI grew from simple rules to advanced deep learning</P>
+      <img src="images/AI3.png">
+      </div>
+</div>      
+
+
+<div class="col-lg-3 col-sm-6">
+      <div class="card">
+      <h3><b>Applications of AI</b></h3> 
+      <p>Purpose:
+      To show real-life uses of AI in daily life and industries.</p>
+      <img src="images/AI4.png">
+      </div>
+</div>      
+
+
+</div>
+</div>  
+
+
+<div id="content">
+
+  <div class="row">
+   
+    <div class="col">
+  <h2><b>AI’s Importance in the Digital Era</b></h2>
+
+  <p>AI matters because it makes work faster through automation, helps make smarter decisions by analyzing data, unlocks creativity with tools that can generate text, images, and videos, and drives future innovations in fields like healthcare, education, and transportation</p>
+   
+    <p>AI is important because it saves time through automation, improves accuracy in decision-making, boosts creativity with Generative AI, and shapes the future of industries with smarter technology</p>
+
+    <h3>Know More</h3>
+ </div>
+
+ <div class="col">
+<img src="images/AI5.png" id="pic">
+</div>
+
+
+</div>
+</div>
+
+<div id="box">
+
+  <h2><b> AI Through the Years</b></h2>
+
+
+  <div class="row justify-content-center">
+
+  <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+       <div class="time">
+         <h4><b>1950s – The Beginning</b></h4>
+         <p>Birth of AIsimple algorithms, Alan Turing’s work.</p>
+         </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+        <div class="time">
+         <h4><b>1980s – Machine Learning</b></h4>
+         <p>AI becomes smarter with data-based learning.</p>
+         </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+           <div class="time">
+           <h4><b>2010s – Deep Learning</b></h4>
+           <p>Neural networks help AI recognize images, voice</p>
+           </div>
+    </div>
+
+
+    <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+          <div class="time">
+         <h4><b>2020s – Generative AI Era</b></h4>
+         <p>AI creates text, images, videos (ChatGPT, Midjourney, etc).</p>
+         </div>
+    </div>
+
+
+    <div class="col-lg-2 col-md-3 col-sm-12 mb-3">
+          <div class="time">
+          <h4><b>Future – Evolving Quickly</b></h4>
+          <p>AI is constantly expanding across every field</p>
+          </div>
+    </div>
+
+
+
+
+</div>
+
+<h3>Know More</h3>
+</div>
+</div>
+
+
+<div id="last">
+
+  <div class="row">
+
+    <div class="col-12 col-md-4">
+        <img src="images/AI7.png" id="im">
+    </div>
+
+    <div class="col-12 col-md-4">
+        <h1><b>Popular AI Tools</b></h1>
+        <p>Quickly show visitors the real-world tools powering modern AI so they immediately recognize familiar names and understand what each does.Highlight the essential AI tools driving creativity, productivity, and innovation.”
+        “Showcase the AI platforms transforming how we work, design, and solve problems.</p>
+    </div>
+
+      <div class="col-12 col-md-4">
+        <img src="images/AI8.png" id="photo">
+      </div>
+
+  </div>
+
+</div>
+
+
+<div id="end">
+
+<div class="row justify-content-center">
+
+  <div class="col-6 col-lg-3 mb-3">
+       <div class="AI">
+         <h4><b>ChatGPT</b></h4>
+         <p>“A conversational AI that answers questions, writes text, and helps with tasks.”</p>
+         </div>
+    </div>
+
+    <div class="col-6 col-lg-3 mb-3">
+        <div class="AI">
+         <h4><b>Midjourney</b></h4>
+         <p>“An image-generation tool that turns text prompts into artistic visuals.”</p>
+         </div>
+    </div>
+
+    <div class="col-6 col-lg-3 mb-3">
+           <div class="AI">
+           <h4><b>Bard</b></h4>
+           <p>“Google’s conversational AI for search, summaries, and quick answers.”</p>
+           </div>
+    </div>
+
+
+    <div class="col-6 col-lg-3 mb-3">
+          <div class="AI">
+         <h4><b>Runway</b></h4>
+         <p>“Creative studio for video, image, and media editing powered by AI.”</p>
+         </div>
+    </div>
+
+</div>
+
+</div>
+
+<footer>
+
+
+<h2><b>Your guide to Artificial Intelligence and Generative AI</b></h2>
+
+<div id="foot">
+  <ul>
+    <li><a href=""> AI Basics </a> </li>
+    <li><a href=""> History</a></li>
+    <li><a href=""> Evolution </a> </li>
+    <li> <a href=""> Applications</a></li>
+  </ul>   
+</div>  
+
+
+<div id="icon">
+  <img src="images/AI9.png">
+  <img src="images/AI10.png">
+  <img src="images/AI11.png">
+
+</div>
+
+<p>Contact</p>
+<ol>
+   <li>Gmail-LearnAI.gmail.com</li>
+   <li>Phone-123456789</li>
+</ol>
+
+</footer>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+
+</html>
